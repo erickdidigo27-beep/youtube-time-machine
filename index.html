@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Time Machine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #cc0000;
+      color: white;
+      padding: 16px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #cc0000;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a30000;
+    }
+  </style>
+</head>
+<body>
+  <header>YouTube Time Machine</header>
+  <div class="container">
+    <div class="card">
+      <h2>Simulador de YouTube Antigo</h2>
+      <p>Escolha um ano para simular o visual do YouTube.</p>
+      <select id="yearSelect">
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+      </select>
+      <button onclick="simulate()">Simular</button>
+    </div>
+    <div class="card" id="output">
+      <h3>Aqui aparecerá a simulação</h3>
+    </div>
+  </div>
+
+  <script>
+    function simulate() {
+      const year = document.getElementById('yearSelect').value;
+      document.getElementById('output').innerHTML =
+        '<h3>YouTube ' + year + '</h3><p>Simulação carregada! (exemplo visual)</p>';
+    }
+  </script>
+</body>
+  </html>
